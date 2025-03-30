@@ -1,0 +1,342 @@
+body {
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f1f3f6;
+  /* padding-top: 100px; */
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #f1f3f6;
+}
+
+.micro-Interactions {
+  background: #f1f3f6;
+}
+
+.Content-section {
+  background: #f1f3f6;
+}
+
+.timeline_component {
+  position: relative;
+  z-index: 1;
+}
+
+/* .container,
+.micro-Interactions,
+.Content-section,
+.container:nth-child(1) {
+  position: relative;
+  z-index: 99;
+} */
+
+.container,
+.micro-Interactions,
+.Content-section,
+.header {
+  position: relative;
+  z-index: 99;
+}
+
+.timeline_progress-bar {
+  z-index: -2;
+  background-color: #fff;
+  background-image: linear-gradient(#50b981, #ffd786 51%, #6aca97);
+  width: 3px;
+  height: 50vh;
+  position: fixed;
+  inset: 0 auto 50vh;
+}
+
+.container:nth-child(1) {
+  padding-top: 100px;
+}
+
+.header {
+  text-align: left;
+  margin-bottom: 40px;
+  color: #000;
+  background: #f1f3f6;
+}
+
+.title2 {
+  font-size: 1.7em;
+}
+
+.subtitle {
+  color: #666;
+  font-size: 1.1em;
+}
+
+.small-title {
+  text-align: left;
+  color: #000;
+  font-size: 1.3em;
+  margin-top: 50px;
+}
+
+.bodytext {
+  text-align: left;
+  color: #666;
+  font-size: 1.1em;
+}
+
+/* .cards-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 0 20px;
+} */
+/* 
+.card {
+  background: #f5f5f5;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  height: 100px;
+  text-decoration: none;
+  display: block;
+  color: inherit;
+} */
+
+/* .card:hover {
+  transform: translateY(-5px);
+  cursor: pointer;
+} */
+
+/* .card h3 {
+  color: #333;
+  margin-bottom: 10px;
+} */
+
+.breadcrumb {
+  padding: 20px 0;
+  margin-bottom: 20px;
+}
+
+.breadcrumb-item {
+  color: #666;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.breadcrumb-item:hover {
+  color: #333;
+  text-decoration: underline;
+}
+
+.breadcrumb-item.active {
+  color: #333;
+  font-weight: 500;
+}
+
+.breadcrumb-separator {
+  color: #666;
+  margin: 0 8px;
+  font-size: 14px;
+}
+
+/* Add responsive breakpoints */
+@media screen and (max-width: 1024px) {
+  .cards-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .cards-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Lottie */
+.lottie-container {
+  /* position: relative;
+  width: 100%;
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px; */
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 300px;
+  background-position: #ddd;
+}
+
+#lottie3 {
+  width: 80px;
+  height: 80px;
+  margin: auto; /* centred */
+}
+
+/* Content Part */
+
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  padding: 20px 0;
+}
+
+.content-container {
+  position: relative;
+  width: 280px;
+  height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* cut */
+  border-radius: 10px;
+}
+
+.content-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* size radio */
+  object-position: center; /* center */
+  display: block;
+}
+
+/* Zoom In */
+.content-container:nth-child(1) img:hover {
+  transform: scale(1.2);
+}
+
+/* Smooth Zoom in */
+.content-container:nth-child(1) img {
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.6s ease;
+}
+
+/* Zoom In + transparency */
+.content-container:nth-child(1) img:hover {
+  transform: scale(1.15);
+  opacity: 0.95;
+}
+
+.content-container:nth-child(1) img:hover {
+  transform: scale(1.15) translateY(-2px);
+  opacity: 0.95;
+  filter: brightness(1.05);
+}
+
+/*  Flip */
+
+.content-container:nth-child(2) {
+  width: 280px;
+  height: 280px;
+  perspective: 1000px; /* 3D 视角 */
+  padding: 0;
+}
+
+/* Inner */
+.img-card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+  transform-style: preserve-3d;
+  padding: 0 !important;
+}
+
+/* Hover Flip */
+.content-container:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+  padding: 0 !important; /* ← 加这一句，强力清除 padding */
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card-front img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translateZ(0);
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.card-back {
+  background: #fff;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotateY(180deg);
+}
+
+/* fancy three*/
+.content-container:nth-child(3) {
+  transition: all 0.5s ease;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+}
+.content-container:nth-child(3):hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+/* Image Belt */
+.image-scroller {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 20px 0;
+}
+
+.image-track {
+  display: flex;
+  gap: 20px;
+  animation: scroll-left 5s linear infinite;
+}
+
+.image-track img {
+  width: 280px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 10px;
+  flex-shrink: 0;
+  display: block;
+}
+
+/* make image scroll left endless */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
