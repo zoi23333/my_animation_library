@@ -1,0 +1,64 @@
+.purple_button {
+  width: 100%;
+  max-width: 180px;
+  height: 57px;
+  border-radius: 10px;
+  background-color: black;
+  cursor: pointer;
+  box-shadow: 2px 2px 40px #acacac;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* 
+.purple_button::before {
+  content: "";
+  background-image: 
+    linear-gradient(10deg, rgba(184, 17, 17, 0.863), rgb(226, 10, 10)), conic-gradient(
+    #1fdfc3 20deg,
+    transparent 120deg
+  );
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  animation: rotate 2s linear infinite;
+} */
+
+.purple_button::before {
+  content: "";
+  background-image: conic-gradient(#a1ffd3 20deg, transparent 120deg);
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  animation: rotate 1.8s linear infinite;
+}
+
+.purple_button::after {
+  content: "Get Started";
+  font-size: larger;
+  width: 97%;
+  max-width: 170px;
+  height: 45px;
+  background: #000;
+  position: absolute;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #a1ffd3;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+.pueplebutton-container {
+  background-color: #f1f3f6;
+}

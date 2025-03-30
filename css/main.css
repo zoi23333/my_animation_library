@@ -48,7 +48,8 @@ body {
   background-image: linear-gradient(#50b981, #ffd786 51%, #6aca97);
   width: 3px;
   height: 50vh;
-  position: fixed;
+  /* position: fixed; */
+  position: absolute;
   inset: 0 auto 50vh;
 }
 
